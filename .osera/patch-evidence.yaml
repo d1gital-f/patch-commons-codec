@@ -1,0 +1,13 @@
+schema: osera-patch-evidence/0.1.0
+producer: d1gital-f playground producr
+release: 1.16.0+osera-patch.001
+baseline: v1.16.0+patch.baseline
+fixes:
+  - cve: CVE-2099-0001
+    note: playground mistakes reference, the upstream link is missing on purpose
+tests:
+  commit: e19bbc58cefa4a8e190a4d6a8534d12d87d6894e
+  command: mvn -B -q test
+  runtime: OpenJDK 21, Apache Maven 3.9.16
+  report: commons-codec-1.16.0+osera-patch.001-tests.zip
+  result: pass
